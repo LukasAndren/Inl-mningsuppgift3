@@ -20,7 +20,7 @@ public final class Inlamningsuppgift3 extends JFrame implements ActionListener {
         p.setLayout(new GridLayout(4, 4));
         for (int i = 0; i < 16; i++) {
             knappar[i] = new JButton();
-            knappar[i].setText(i+1 + "");
+            knappar[i].setText(i + 1 + "");
             knappar[i].addActionListener(this);
             p.add(knappar[i]);
         }
@@ -33,7 +33,7 @@ public final class Inlamningsuppgift3 extends JFrame implements ActionListener {
         setSize(600, 600);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        //blanda();
+        blanda();
 
     }
 
@@ -56,9 +56,9 @@ public final class Inlamningsuppgift3 extends JFrame implements ActionListener {
 
     public boolean ärLöst() {
         for (int i = 0; i < 16 - 1; i++) {
-                if (!knappar[i].getText().equals(i+1+"") ) {
-                    return false;
-                }
+            if (!knappar[i].getText().equals(i + 1 + "")) {
+                return false;
+            }
         }
         return true;
     }
@@ -218,10 +218,10 @@ public final class Inlamningsuppgift3 extends JFrame implements ActionListener {
     public void bytPlats(int tomKnapp, int trycktKnapp) {
         knappar[tomKnapp].setText(knappar[trycktKnapp].getText());
         knappar[trycktKnapp].setText("");
-        if (ärLöst() == true){
+        if (ärLöst() == true) {
             JOptionPane.showMessageDialog(null, "Grattis, du vann!");
         }
-        
+
     }
 
     public static void main(String[] args) {
